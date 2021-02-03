@@ -10,8 +10,7 @@ body{
     box-sizing: border-box;
     margin: 20px auto;
 }
-.dice_point::before{
-    content: "";
+.dice_point{
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -43,40 +42,39 @@ body{
 .dice_three .dice_point:nth-child(2){
     align-self: center;
 }
-.dice_four{
+.dice_four {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-content: space-between;
 }
-.dice_four .dice_point{
-    flex-basis: 50%;
-}
-.dice_four .dice_point:nth-child(even){
-    text-align:right;
+.dice_four .dice_row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .dice_five{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     margin: 0px 20px 0px;
+    justify-content: space-between;
 }
-.dice_five .dice_point:nth-child(3){
-    flex-basis: 100%;
-    text-align: center;
+.dice_five .dice_row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dice_five .dice_point_center{
+    align-self: center;
+    height: 30px;
 }
 .dice_six{
     display: flex;
-    flex-flow: wrap column;
+    flex-direction: column;
     justify-content: space-between;
-    align-content: space-between; 
 }
-.dice_six .dice_point{
+.dice_six .dice_row{
     display: flex;
+    justify-content: space-between;
 }
-.dice_in_a_row{
+.dices_in_a_row{
     display: flex;
     justify-content: center;
-    width: fit-content;
-    margin: 0px auto;
 }
